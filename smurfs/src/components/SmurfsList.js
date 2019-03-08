@@ -13,18 +13,20 @@ class SmurfsList extends React.Component {
     render() {
         return (
             <div className="smurfs-list-container">
-                <h1>See WHICH Smurfs are in the Village!</h1>
-                {this.props.smurfs.map(smurf => {
-                    return (
-                        <Smurf 
-                            name={smurf.name} 
-                            age={smurf.age}
-                            height={smurf.height}
-                            key={smurf.id}
-                            image={smurf.image}
-                        />
-                    );
-                })}
+                <h1 className="smurfs-list-heading">See WHO is in the Village!</h1>
+                <div className="smurfs-list">
+                    {this.props.smurfs.map(smurf => {
+                        return (
+                            <Smurf 
+                                name={smurf.name} 
+                                age={smurf.age}
+                                height={smurf.height}
+                                key={smurf.id}
+                                image={smurf.image}
+                            />
+                        );
+                    })}
+                </div>       
             </div>
         );  
     }

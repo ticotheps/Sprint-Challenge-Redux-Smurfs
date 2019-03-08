@@ -14,15 +14,13 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <ul className="navbar-container">
+        <div className="navbar-container">
           <h1 className="navbar-title">Welcome to Smurf Village!</h1>
-          <span className="navbar-link-home">
+          <div className="navbar-links-container">
             <Link to="/smurfs">Smurfs</Link>
-          </span>
-          <span className="navbar-link-add">
             <Link to="/smurfs/form">Add Smurf</Link>
-          </span>
-        </ul>
+          </div>
+        </div>
         <Route 
           exact 
           path="/smurfs" 

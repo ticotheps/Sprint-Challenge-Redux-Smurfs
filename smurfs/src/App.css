@@ -7,27 +7,55 @@ html {
 }
 
 .App {
+  background-color: lightskyblue;
   text-align: center;
 }
 
 .navbar-container {
-  border: 1px solid green;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid yellow;
 }
 
 .navbar-title {
-  border: 1px solid red;
+  color: blue;
+  font-size: 3.5rem;
 }
 
-.navbar-link-home a {
-  border: 1px solid blue;
+.navbar-links-container {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20px;
 }
 
-.navbar-link-add a {
-  border: 1px solid orangered;
+.navbar-links-container a {
+  color: blue;
+  text-decoration: none;
+  font-size: 2.5rem;
 }
 
 .smurfs-list-container {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.smurfs-list-heading {
+  font-size: 2.4rem;
+  color: red;
+}
+
+.smurfs-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .smurf-form-container {
@@ -35,5 +63,12 @@ html {
 }
 
 .smurf-card-container {
-  border: 1px solid yellow;
+  width: 25%;
+  border: 3px solid yellow;
+  border-radius: 10px;
+  margin: 0px 10px 100px;
+}
+
+.smurf-card-image {
+  border-radius: 10px;
 }
