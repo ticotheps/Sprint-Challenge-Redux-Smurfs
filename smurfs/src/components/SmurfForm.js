@@ -25,7 +25,16 @@ class SmurfForm extends React.Component {
     addSmurf = e => {
         console.log("The addSmurf() function is running! AWESOME!");
         e.preventDefault();
-    }
+        this.props.addMember(this.state.smurf);
+        this.setState({ 
+            smurf: {
+                name: '',
+                age: '',
+                height: '',
+                image: ''
+            }
+        });
+    };
 
     render() {
         return (
