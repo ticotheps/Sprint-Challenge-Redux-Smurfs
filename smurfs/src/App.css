@@ -93,3 +93,18 @@ html {
   padding-left: 10px;
   margin: 10px 0;
 }
+
+.add-smurf-button {
+  width: 25%;
+  height: 35px;
+  font-size: 2.0rem;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.add-smurf-button:hover {
+  cursor: pointer;
+  border: 2px solid red;
+  background-color: blue;
+  color: white;
+}

@@ -53,6 +53,7 @@ class SmurfForm extends React.Component {
                         value={this.state.image}
                         name="image"
                     />
+                    <button className="add-smurf-button" type="submit">Add Smurf</button>
                 </form>
             </div>
         ); 

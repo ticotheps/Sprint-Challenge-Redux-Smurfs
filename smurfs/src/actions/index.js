@@ -8,7 +8,7 @@ import axios from 'axios';
 export const FETCH_SMURFS_START = "FETCH_SMURFS_START";
 export const FETCH_SMURFS_SUCCESS = "FETCH_SMURFS_SUCCESS";
 export const FETCH_SMURFS_FAILURE = "FETCH_SMURFS_FAILURE";
-export const ADD_NEW_SMURF = "ADD_NEW_SMURF";
+export const ADD_SMURF = "ADD_SMURF";
 
 /*
   For this project you'll need at least 2 action creators for the main portion,
@@ -31,6 +31,24 @@ export const getSmurfs = () => dispatch => {
         type: FETCH_SMURFS_SUCCESS,
         payload: res.data
       });
+    })
+    .catch(err => {
+      // console.log(err);
+      dispatch({
+        type: FETCH_SMURFS_FAILURE,
+        payload: err.response.data.error.message
+      });
+    });
+};
+
+export const addSmurf = smurf => dispatch => {
+  console.log(smurf);
+  dispatch({ type: ADD_SMURF })
+  axios
+    .post("http://localhost:3333/smurfs")
+    .then(res => {
+      localStorage.setItem("newSmurf", res.data.payload);
+      getSmurfs();
     })
     .catch(err => {
       // console.log(err);
