@@ -8,7 +8,7 @@ import axios from 'axios';
 export const FETCH_SMURFS_START = "FETCH_SMURFS_START";
 export const FETCH_SMURFS_SUCCESS = "FETCH_SMURFS_SUCCESS";
 export const FETCH_SMURFS_FAILURE = "FETCH_SMURFS_FAILURE";
-export const ADD_SMURF = "ADD_SMURF";
+export const ADD_NEW_SMURF = "ADD_NEW_SMURF";
 
 /*
   For this project you'll need at least 2 action creators for the main portion,
