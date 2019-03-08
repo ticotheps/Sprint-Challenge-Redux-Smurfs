@@ -11,7 +11,23 @@ function App () {
   return (
     <Router>
       <div className="App">
-        <Route path="/smurfs" component={SmurfsList} />
+        <ul>
+          <li>
+            <Link exact to="/smurfs">Home</Link>
+          </li>
+          <li>
+            <Link to="/smurfs/form">Add Smurf</Link>
+          </li>
+        </ul>
+        <h1>Welcome to Smurf Village!</h1>
+        <Route 
+          exact 
+          path="/smurfs" 
+          component={SmurfsList} 
+        />
+        <Route 
+          path="/smurfs/form" 
+          component={SmurfForm} />
       </div>
     </Router>
 
