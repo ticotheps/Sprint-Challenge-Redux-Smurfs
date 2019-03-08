@@ -16,12 +16,12 @@ const App = () => {
       <div className="App">
         <ul className="navbar-container">
           <h1 className="navbar-title">Welcome to Smurf Village!</h1>
-          <li className="navbar-link-home">
-            <Link to="/smurfs">Home</Link>
-          </li>
-          <li className="navbar-link-add">
+          <span className="navbar-link-home">
+            <Link to="/smurfs">Smurfs</Link>
+          </span>
+          <span className="navbar-link-add">
             <Link to="/smurfs/form">Add Smurf</Link>
-          </li>
+          </span>
         </ul>
         <Route 
           exact 
