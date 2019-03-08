@@ -17,7 +17,7 @@ function App () {
         <ul className="navbar-container">
           <h1 className="navbar-title">Welcome to Smurf Village!</h1>
           <li className="navbar-link-home">
-            <Link exact to="/smurfs">Home</Link>
+            <Link to="/smurfs">Home</Link>
           </li>
           <li className="navbar-link-add">
             <Link to="/smurfs/form">Add Smurf</Link>
