@@ -1,12 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
+import Smurf from "./Smurf";
 import { getSmurfs } from '../actions';
 
 class SmurfsList extends React.Component { 
 
     componentDidMount() {
-        console.log("CDM is running!");
+        // console.log("CDM is running!");
         this.props.getSmurfs();
     }
 
@@ -14,7 +14,13 @@ class SmurfsList extends React.Component {
         return (
             <div className="smurfs-list-container">
                 <h1>Checkout the Smurfs!</h1>
-                <h2>{this.state.smurfs.name}</h2>
+                {this.props.smurfs.map(smurf => {
+                    return (
+                        <Smurf 
+                            name={smurf.name} 
+                        />
+                    );
+                })}
             </div>
         );  
     }
@@ -22,13 +28,10 @@ class SmurfsList extends React.Component {
 }
 
 const mapStateToProps = state => {
-    console.log(state);
+    // console.log(state);
     return {
-        smurfs: [],
+        smurfs: state.smurfs,
         fetchingSmurfs: state.fetchingSmurfs,
-        addingSmurf: state.addingSmurf,
-        updatingSmurf: state.updatingSmurf,
-        deletingSmurf: state.deletingSmurf,
         error: null
     }
   };

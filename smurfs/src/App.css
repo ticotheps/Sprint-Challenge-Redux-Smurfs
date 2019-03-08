@@ -18,11 +18,11 @@ html {
   border: 1px solid red;
 }
 
-.navbar-link-home {
+.navbar-link-home a {
   border: 1px solid blue;
 }
 
-.navbar-link-add {
+.navbar-link-add a {
   border: 1px solid orangered;
 }
 
@@ -32,4 +32,8 @@ html {
 
 .smurf-form-container {
   border: 1px solid blue;
+}
+
+.smurf-card-container {
+  border: 1px solid yellow;
 }

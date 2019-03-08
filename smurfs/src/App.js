@@ -10,7 +10,7 @@ import './App.css';
  Just remember, `how do I `connect` my components to redux?`
  `How do I ensure that my component links the state to props?`
  */
-function App () {
+const App = () => {
   return (
     <Router>
       <div className="App">

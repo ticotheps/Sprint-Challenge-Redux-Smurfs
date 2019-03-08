@@ -12,7 +12,7 @@ const initialState = {
 };
 
 export const smurfsReducer = (state = initialState, action) => {
-  console.log("The reducer function is firing! Yay!", action);
+  // console.log("The reducer function is firing! Yay!", action);
   switch (action.type) {
     case FETCH_SMURFS_START:
       return {
@@ -25,6 +25,7 @@ export const smurfsReducer = (state = initialState, action) => {
         ...state,
         error: "",
         fetchingSmurfs: false,
+        smurfs: action.payload
       };
     case FETCH_SMURFS_FAILURE:
       return {
