@@ -79,6 +79,9 @@ html {
 }
 
 .smurf-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid red;
   margin-bottom: 100px;
 }
@@ -89,5 +92,5 @@ html {
   font-size: 2.2rem;
   border-radius: 5px;
   padding-left: 10px;
-  margin-bottom: 100px;
+  margin: 10px 0;
 }
