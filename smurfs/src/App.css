@@ -72,6 +72,10 @@ html {
   color: white;
 }
 
+.smurf-card-container:hover {
+  cursor: pointer;
+}
+
 .smurf-card-image {
   max-width: 100%;
   border-radius: 10px;

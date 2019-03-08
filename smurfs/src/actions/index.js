@@ -47,7 +47,7 @@ export const addSmurf = smurf => dispatch => {
   axios
     .post("http://localhost:3333/smurfs")
     .then(res => {
-      localStorage.setItem("newSmurf", res.data.payload);
+      localStorage.setItem("newSmurf", res.data);
       getSmurfs();
     })
     .catch(err => {

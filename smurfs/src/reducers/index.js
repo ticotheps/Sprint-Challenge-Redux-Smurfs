@@ -1,7 +1,8 @@
 import {
   FETCH_SMURFS_START,
   FETCH_SMURFS_SUCCESS,
-  FETCH_SMURFS_FAILURE
+  FETCH_SMURFS_FAILURE,
+  ADD_SMURF
 } from '../actions';
 
 
@@ -32,6 +33,18 @@ export const smurfsReducer = (state = initialState, action) => {
         ...state,
         error: "Whoops, someting went wrong",
         fetchingSmurfs: false
+      };
+    case ADD_SMURF:
+      const newSmurf = {
+        name: action.payload.name,
+        age: action.payload.age,
+        height: action.payload.height,
+        image: action.payload.image,
+        id: action.payload.id
+      };
+      return {
+        ...state,
+        smurfs: [...state.smurfs, newSmurf]
       };
     default:
       return state;
