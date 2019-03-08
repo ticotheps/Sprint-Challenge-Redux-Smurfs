@@ -1,7 +1,3 @@
-/*
-  Be sure to import in all of the action types from `../actions`
-*/
-
 import {
   FETCH_SMURFS_FETCHING,
   FETCH_SMURFS_SUCCESS,
@@ -18,12 +14,34 @@ const initialState = {
    error: null
 };
 
-function reducer(state=intialState, action) {
+function reducer(state = intialState, action) {
   console.log("The reducer function is firing! Yay!", action);
-  return state;
+  switch (action.type) {
+    case FETCH_SMURFS_FETCHING:
+      return {
+        ...state,
+        error: "",
+        fetchingSmurfs: true
+      };
+    case FETCH_SMURFS_SUCCESS:
+      return {
+        ...state,
+        error: "",
+        fetchingSmurfs: false,
+      };
+    case FETCH_SMURFS_FAILURE:
+      return {
+        ...state,
+        error: "Whoops, someting went wrong",
+        fetchingSmurfs: false
+      };
+    default:
+      return state;
+  }
 }
 
 export default reducer;
+
 /*
   You'll only need one smurf reducer for this project.
   Feel free to export it as a default and import as rootReducer. 

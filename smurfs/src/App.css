@@ -9,3 +9,23 @@ html {
 .App {
   text-align: center;
 }
+
+.navbar-container {
+  border: 1px solid green;
+}
+
+.navbar-title {
+  border: 1px solid red;
+}
+
+.navbar-link-home {
+  border: 1px solid blue;
+}
+
+.navbar-link-add {
+  border: 1px solid orangered;
+}
+
+.smurfs-list-container {
+  border: 1px solid black;
+}

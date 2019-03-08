@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 import './App.css';
 /*
  to wire this component up you're going to need a few things.
@@ -11,39 +12,28 @@ function App () {
   return (
     <Router>
       <div className="App">
-        <ul>
-          <li>
+        <ul className="navbar-container">
+          <h1 className="navbar-title">Welcome to Smurf Village!</h1>
+          <li className="navbar-link-home">
             <Link exact to="/smurfs">Home</Link>
           </li>
-          <li>
+          <li className="navbar-link-add">
             <Link to="/smurfs/form">Add Smurf</Link>
           </li>
         </ul>
-        <h1>Welcome to Smurf Village!</h1>
         <Route 
           exact 
           path="/smurfs" 
           component={SmurfsList} 
         />
-        <Route 
+        {/* <Route 
           path="/smurfs/form" 
-          component={SmurfForm} />
+          component={SmurfForm} 
+        /> */}
       </div>
     </Router>
 
   );    
 }
 
-const mapStateToProps = state => ({
-  smurfs: [],
-  fetchingSmurfs: state.fetchingSmurfs,
-  addingSmurf: state.addingSmurf,
-  updatingSmurf: state.updatingSmurf,
-  deletingSmurf: state.deletingSmurf,
-  error: null
-});
-
-export default connect(
-  mapStateToProps,
-  { getSmurfs }
-)(App);
+export default App;
