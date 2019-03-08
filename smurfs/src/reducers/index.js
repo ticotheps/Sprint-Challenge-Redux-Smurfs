@@ -2,6 +2,12 @@
   Be sure to import in all of the action types from `../actions`
 */
 
+import {
+  FETCH_SMURFS_FETCHING,
+  FETCH_SMURFS_SUCCESS,
+  FETCH_SMURFS_FAILURE
+} from '../actions';
+
 
 const initialState = {
    smurfs: [],

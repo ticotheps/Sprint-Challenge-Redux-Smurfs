@@ -20,7 +20,7 @@ export const FETCH_SMURFS_FAILURE = "FETCH_SMURFS_FAILURE";
    D - deleteSmurf
 */
 
-export const getSmurfs = () dispatch => {
+export const getSmurfs = () => dispatch => {
   dispatch({ type: FETCH_SMURFS_FETCHING });
 
   axios
