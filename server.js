@@ -14,9 +14,11 @@ const sendUserError = (msg, res) => {
 
 let smurfs = [
   {
+    id: 0,
     name: 'Brainey',
     age: 200,
-    height: '5cm'
+    height: '5cm',
+    imageUrl: 'https://vignette.wikia.nocookie.net/smurfs/images/e/e8/Brainy.jpg/revision/latest?cb=20090609234412'
   }
 ];
 server.get('/smurfs', (req, res) => {

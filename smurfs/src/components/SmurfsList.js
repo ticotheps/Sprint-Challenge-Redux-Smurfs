@@ -13,7 +13,7 @@ class SmurfsList extends React.Component {
     render() {
         return (
             <div className="smurfs-list-container">
-                <h1>Checkout the Smurfs!</h1>
+                <h1>Checkout All the Smurfs!</h1>
                 {this.props.smurfs.map(smurf => {
                     return (
                         <Smurf 
