@@ -2,12 +2,22 @@ import React from 'react';
 
 class SmurfForm extends React.Component {
     state = {
-        newSmurf: {
-            newName: '',
-            newAge: '',
-            newHeight: '',
-            newImage: ''
+        smurf: {
+            name: '',
+            age: '',
+            height: '',
+            image: ''
         }
+    };
+
+    handleInputChange = e => {
+        console.log("The handleInputChange() function is working!!!");
+        this.setState({
+            smurf: {
+                ...this.state.smurf,
+                [e.target.name]: e.target.value
+            }
+        });
     }
 
     render() {
@@ -19,29 +29,29 @@ class SmurfForm extends React.Component {
                         type="text"
                         onChange={this.handleInputChange}
                         placeholder="Name"
-                        value={this.state.newName}
-                        name="newName"
+                        value={this.state.name}
+                        name="name"
                     />
                     <input 
                         type="text"
                         onChange={this.handleInputChange}
                         placeholder="Age"
-                        value={this.state.newAge}
-                        name="newAge"
+                        value={this.state.age}
+                        name="age"
                     />
                     <input 
                         type="text"
                         onChange={this.handleInputChange}
                         placeholder="Height"
-                        value={this.state.newHeight}
-                        name="newHeight"
+                        value={this.state.height}
+                        name="height"
                     />
                     <input 
                         type="text"
                         onChange={this.handleInputChange}
                         placeholder="Image URL"
-                        value={this.state.newImage}
-                        name="newImage"
+                        value={this.state.image}
+                        name="image"
                     />
                 </form>
             </div>
