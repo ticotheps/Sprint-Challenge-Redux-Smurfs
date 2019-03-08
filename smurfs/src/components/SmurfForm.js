@@ -20,13 +20,18 @@ class SmurfForm extends React.Component {
                 [e.target.name]: e.target.value
             }
         });
+    };
+
+    addSmurf = e => {
+        console.log("The addSmurf() function is running! AWESOME!");
+        e.preventDefault();
     }
 
     render() {
         return (
             <div className="smurf-form-container">
                 <h2 className="smurf-form-heading">Add a NEW Smurf to the Village!</h2>
-                <form className="smurf-form">
+                <form className="smurf-form" onSubmit={this.addSmurf}>
                     <input 
                         type="text"
                         onChange={this.handleInputChange}
