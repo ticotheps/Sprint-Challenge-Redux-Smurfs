@@ -29,3 +29,7 @@ html {
 .smurfs-list-container {
   border: 1px solid black;
 }
+
+.smurf-form-container {
+  border: 1px solid blue;
+}

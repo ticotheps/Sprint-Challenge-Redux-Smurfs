@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import SmurfsList from "./components/SmurfsList";
+import SmurfForm from "./components/SmurfForm";
 
 import './App.css';
 /*
@@ -26,13 +28,12 @@ function App () {
           path="/smurfs" 
           component={SmurfsList} 
         />
-        {/* <Route 
+        <Route 
           path="/smurfs/form" 
           component={SmurfForm} 
-        /> */}
+        />
       </div>
     </Router>
-
   );    
 }
 

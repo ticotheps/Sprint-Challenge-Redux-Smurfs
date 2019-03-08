@@ -1,5 +1,5 @@
 import {
-  FETCH_SMURFS_FETCHING,
+  FETCH_SMURFS_START,
   FETCH_SMURFS_SUCCESS,
   FETCH_SMURFS_FAILURE
 } from '../actions';
@@ -8,16 +8,13 @@ import {
 const initialState = {
    smurfs: [],
    fetchingSmurfs: false,
-   addingSmurf: false,
-   updatingSmurf: false,
-   deletingSmurf: false,
    error: null
 };
 
-function reducer(state = intialState, action) {
+export const smurfsReducer = (state = initialState, action) => {
   console.log("The reducer function is firing! Yay!", action);
   switch (action.type) {
-    case FETCH_SMURFS_FETCHING:
+    case FETCH_SMURFS_START:
       return {
         ...state,
         error: "",
@@ -38,9 +35,7 @@ function reducer(state = intialState, action) {
     default:
       return state;
   }
-}
-
-export default reducer;
+};
 
 /*
   You'll only need one smurf reducer for this project.
