@@ -2,11 +2,11 @@ import React from 'react';
 
 class SmurfForm extends React.Component {
     state = {
-        smurf: {
-            name: '',
-            age: '',
-            height: '',
-            image: ''
+        newSmurf: {
+            newName: '',
+            newAge: '',
+            newHeight: '',
+            newImage: ''
         }
     }
 
@@ -19,29 +19,29 @@ class SmurfForm extends React.Component {
                         type="text"
                         onChange={this.handleInputChange}
                         placeholder="Name"
-                        value={this.state.name}
-                        name="name"
+                        value={this.state.newName}
+                        name="newName"
                     />
                     <input 
                         type="text"
                         onChange={this.handleInputChange}
                         placeholder="Age"
-                        value={this.state.age}
-                        name="age"
+                        value={this.state.newAge}
+                        name="newAge"
                     />
                     <input 
                         type="text"
                         onChange={this.handleInputChange}
                         placeholder="Height"
-                        value={this.state.height}
-                        name="height"
+                        value={this.state.newHeight}
+                        name="newHeight"
                     />
                     <input 
                         type="text"
                         onChange={this.handleInputChange}
                         placeholder="Image URL"
-                        value={this.state.image}
-                        name="image"
+                        value={this.state.newImage}
+                        name="newImage"
                     />
                 </form>
             </div>
