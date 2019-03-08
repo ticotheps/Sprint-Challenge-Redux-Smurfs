@@ -20,7 +20,7 @@ class SmurfsList extends React.Component {
                             name={smurf.name} 
                             age={smurf.age}
                             height={smurf.height}
-                            key={smurf.id}
+                            key={this.props.smurfId}
                         />
                     );
                 })}
