@@ -40,7 +40,7 @@ const mapStateToProps = state => {
         fetchingSmurfs: state.fetchingSmurfs,
         error: null
     }
-  };
+};
 
 export default connect(
     mapStateToProps,

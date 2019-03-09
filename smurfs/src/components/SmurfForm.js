@@ -4,7 +4,7 @@ import { addSmurf } from '../actions';
 
 class SmurfForm extends React.Component {
     state = {
-        smurf: {
+        newSmurf: {
             name: '',
             age: '',
             height: '',
@@ -15,8 +15,8 @@ class SmurfForm extends React.Component {
     handleInputChange = e => {
         console.log("The handleInputChange() function is working!!!");
         this.setState({
-            smurf: {
-                ...this.state.smurf,
+            newSmurf: {
+                ...this.state.newSmurf,
                 [e.target.name]: e.target.value
             }
         });
@@ -25,9 +25,9 @@ class SmurfForm extends React.Component {
     addSmurf = e => {
         console.log("The addSmurf() function is running! AWESOME!");
         e.preventDefault();
-        this.props.addMember(this.state.smurf);
+        this.props.addSmurf(this.state.newSmurf);
         this.setState({ 
-            smurf: {
+            newSmurf: {
                 name: '',
                 age: '',
                 height: '',
@@ -45,28 +45,28 @@ class SmurfForm extends React.Component {
                         type="text"
                         onChange={this.handleInputChange}
                         placeholder="Name"
-                        value={this.state.name}
+                        value={this.state.newSmurf.name}
                         name="name"
                     />
                     <input 
                         type="text"
                         onChange={this.handleInputChange}
                         placeholder="Age"
-                        value={this.state.age}
+                        value={this.state.newSmurf.age}
                         name="age"
                     />
                     <input 
                         type="text"
                         onChange={this.handleInputChange}
                         placeholder="Height"
-                        value={this.state.height}
+                        value={this.state.newSmurf.height}
                         name="height"
                     />
                     <input 
                         type="text"
                         onChange={this.handleInputChange}
                         placeholder="Image URL"
-                        value={this.state.image}
+                        value={this.state.newSmurf.image}
                         name="image"
                     />
                     <button className="add-smurf-button" type="submit">Add Smurf</button>
@@ -76,4 +76,17 @@ class SmurfForm extends React.Component {
     }
 }
 
-export default SmurfForm;
+const mapStateToProps = state => {
+    // console.log(state);
+    return {
+        smurfForm: state.smurfs,
+        smurfs: state.smurfs,
+        fetchingSmurfs: state.fetchingSmurfs,
+        error: null
+    }
+};
+
+export default connect(
+    mapStateToProps,
+    { addSmurf }
+)(SmurfForm);
