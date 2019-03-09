@@ -53,8 +53,8 @@ export const addSmurf = newSmurf => dispatch => {
         type: ADD_SMURF_SUCCESS,
         payload: res.data
       });
-      // localStorage.setItem("newSmurf", res.data);
-      // getSmurfs();
+      localStorage.setItem("newSmurf", res.data);
+      getSmurfs();
     })
     .catch(err => {
       // console.log(err);
