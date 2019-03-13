@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.App {
+  background-color: lightskyblue;
+  text-align: center;
+}
+
+.navbar-container {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid yellow;
+}
+
+.navbar-title {
+  color: blue;
+  font-size: 3.0rem;
+}
+
+.navbar-links-container {
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.navbar-links-container a {
+  color: blue;
+  text-decoration: none;
+  font-size: 2.2rem;
+}
+
+.smurfs-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.smurfs-list-heading {
+  font-size: 2.4rem;
+  color: red;
+}
+
+.smurfs-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.smurf-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  border: 3px solid yellow;
+  border-radius: 10px;
+  margin: 0px 10px 100px;
+  padding: 0 10px;
+  background-color: blue;
+  color: white;
+}
+
+.smurf-card-container:hover {
+  cursor: pointer;
+}
+
+.smurf-card-image {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.smurf-form-container {
+  border: 1px solid blue;
+}
+
+.smurf-form-heading {
+  font-size: 2.8rem;
+  color: blue;
+}
+
+.smurf-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.smurf-form input {
+  width: 30%;
+  height: 40px;
+  font-size: 2.2rem;
+  border-radius: 5px;
+  padding-left: 10px;
+  margin: 10px 0;
+}
+
+.add-smurf-button {
+  width: 25%;
+  height: 35px;
+  font-size: 2.0rem;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.add-smurf-button:hover {
+  cursor: pointer;
+  border: 2px solid red;
+  background-color: blue;
+  color: white;
+}
